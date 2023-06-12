@@ -1,0 +1,70 @@
+# for some reason the creation of the brewery doesn't show on the console,
+# but I created it by executing the following commands:
+# Brewery.new name: "BrewDog", year: 2007
+# b = Brewery.new name: "BrewDog", year: 2007
+# b.save
+[2]+  Stopped                 rails c
+erikpeteri@DESKTOP-7DTF2PI:~/webpalvelinohjelmointi2023/ratebeer$
+27"]]
+  TRANSACTION (10.5ms)  commit transaction
+=> true
+irb(main):004:0> panimo = Brewery.find_by name: "BrewDog"
+  Brewery Load (0.3ms)  SELECT "breweries".* FROM "breweries" WHERE "breweries"."name" = ? LIMIT ?  [["name", "BrewDog"], ["LIMIT", 1]]
+=>
+#<Brewery:0x00007f0636f56548
+...
+ updated_at: Mon, 12 Jun 2023 11:57:51.129127000 UTC +00:00>
+irb(main):006:0> beer.create name: "Punk IPA", style: "IPA", brewery_id: panimo.id
+(irb):6:in `<main>': undefined local variable or method `beer' for main:Object (NameError)
+
+beer.create name: "Punk IPA", style: "IPA", brewery_id: panimo.id
+^^^^
+irb(main):007:0> Beer.create name: "Punk IPA", style: "IPA", brewery_id: panimo.id
+  TRANSACTION (0.1ms)  begin transaction
+  Brewery Load (0.2ms)  SELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? LIMIT ?  [["id", 5], ["LIMIT", irb(main):008:0> Beer.create name: "Nanny State", style: "lowalcohol", brewery_id: panimo.id
+  TRANSACTION (0.1ms)  begin transaction
+  Brewery Load (0.2ms)  SELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? LIMIT ?  [["id", 5], ["LIMIT", 1]]
+  Beer Create (0.5ms)  INSERT INTO "beers" ("name", "style", "brewery_id", "created_at", "updated_at") VALUES (?, ?, ?,  style: "lowalcohol",
+ brewery_id: 5,
+ created_at: Mon, 12 Jun 2023 12:03:11.198403000 UTC +00:00,
+ updated_at: Mon, 12 Jun 2023 12:03:11.198403000 UTC +00:00>
+irb(main):009:0> b = Beer.find_by name: "Punk IPA"
+  Beer Load (0.2ms)  SELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?  [["name", "Punk IPA"], ["LIMIT", 1]score", 5], ["beer_id", 15], ["created_at", "2023-06-12 12:20:59.708733"], ["updated_at", "2023-06-12 12:20:59.708733"]]
+  TRANSACTION (9.8ms)  commit transaction
+=>
+#<Rating:0x00007f06376d23a8
+ id: 4,
+ score: 5,
+ beer_id: 15,
+ created_at: Mon, 12 Jun 2023 12:20:59.708733000 UTC +00:00,
+ updated_at: Mon, 12 Jun 2023 12:21:13.102942000 UTC +00:00>
+irb(main):012:0> b.ratings
+  Rating Load (0.4ms)  SELECT "ratings".* FROM "ratings" WHERE "ratings"."beer_id" = ?  [["beer_id", 15]]
+=>
+[#<Rating:0x00007f06376d23a8
+  score: 20,
+  beer_id: 15,
+  created_at: Mon, 12 Jun 2023 12:21:13.102942000 UTC +00:00,
+  updated_at: Mon, 12 Jun 2023 12:21:13.102942000 UTC +00:00>]
+irb(main):013:0> b = Beer.find_by name: "Nanny State"
+  Rating Create (0.5ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 7], ["beer_id", 16], ["created_at", "2023-06-12 12:22:02.435228"], ["updated_at", "2023-06-12 12:22:02.435228"]]
+  TRANSACTION (13.1ms)  commit transaction
+=>
+#<Rating:0x00007f0636d067c0
+ id: 6,
+ score: 7,
+ beer_id: 16,
+ created_at: Mon, 12 Jun 2023 12:22:02.435228000 UTC +00:00,
+ updated_at: Mon, 12 Jun 2023 12:22:02.435228000 UTC +00:00>
+irb(main):015:0> b.ratings.create score: 2
+  TRANSACTION (0.1ms)  begin transaction
+  Rating Create (0.5ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 2], ["beer_id", 16], ["created_at", "2023-06-12 12:22:09.644455"], ["updated_at", "2023-06-12 12:22:09.644455"]]
+  TRANSACTION (13.3ms)  commit transaction
+=>
+#<Rating:0x00007f0636cf76d0
+ id: 7,
+ score: 2,
+ beer_id: 16,
+ created_at: Mon, 12 Jun 2023 12:22:09.644455000 UTC +00:00,
+ updated_at: Mon, 12 Jun 2023 12:22:09.644455000 UTC +00:00>
+irb(main):016:0>
