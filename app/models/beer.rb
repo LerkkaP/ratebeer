@@ -6,4 +6,8 @@ class Beer < ApplicationRecord
       scores = ratings.map { |name| name.score}
       (scores.sum / ratings.count).to_f
     end
+
+  def to_s
+    "#{self.name}, #{brewery.name}"
+  end
 end
