@@ -17,9 +17,12 @@
   </div>
 
   <div>
-    <%= form.label :style, style: "display: block" %>
-    <%= form.text_field :style %>
+    <%= form_for(@beer) do |f| %>
+      <%= f.select :style, options_for_select(@styles) %>
+    <% end %>
   </div>
+
+
 
   <div>
     <%= form_for(@beer) do |f| %>
