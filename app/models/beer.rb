@@ -4,7 +4,7 @@ class Beer < ApplicationRecord
 
   def average_rating
       scores = ratings.map { |name| name.score}
-      (scores.sum / ratings.count).to_f
+      (scores.sum.to_f / ratings.count).truncate(1)
     end
 
   def to_s
