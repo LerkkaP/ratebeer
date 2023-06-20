@@ -1,6 +1,34 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @user %>
+<h2>Username: </h2>
+
+<p>
+  <%= @user.username %>
+<p>
+
+<p>
+  <%= "Has made #{pluralize(@user.ratings.count, 'rating')}, average rating #{@user.average_rating}" %>
+</p>
+
+<h3>ratings</h3>
+
+<div>
+  <table>
+    <tbody>
+      <% @user.ratings.each do |rating| %>
+        <tr>
+          <td>
+            <%= render rating %>
+          </td>
+          <td>
+            <%= button_to 'Delete', rating, method: :delete, data: { turbo_confirm: "Are you sure you want to delete?"} %> 
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
 
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
@@ -8,3 +36,8 @@
 
   <%= button_to "Destroy this user", @user, method: :delete %>
 </div>
+
+
+
+
+
