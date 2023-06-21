@@ -1,8 +1,8 @@
 class User < ApplicationRecord
-    include RatingAverage
+  include RatingAverage
 
-    validates :username, uniqueness: true,
-    length: { minimum: 3, maximum: 30 }
+  validates :username, uniqueness: true,
+                       length: { minimum: 3, maximum: 30 }
 
-    has_many :ratings
+  has_many :ratings
 end
