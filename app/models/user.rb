@@ -8,4 +8,8 @@ class User < ApplicationRecord
   has_many :beers, through: :ratings
   has_many :memberships
   has_many :beer_clubs, through: :memberships
+
+  def already_member_of?(beer_club)
+    beer_clubs.include?(beer_club)
+  end  
 end

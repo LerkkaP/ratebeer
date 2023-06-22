@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :beer_club_id, style: "display: block" %>
-    <%= form.collection_select :beer_club_id, BeerClub.all, :id, :name %>
+    <%= form.collection_select :beer_club_id, BeerClub.all.reject { |club| current_user.already_member_of?(club) }, :id, :name %>
   </div>
 
   <div>
