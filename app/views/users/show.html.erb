@@ -10,6 +10,18 @@
   <%= "Has made #{pluralize(@user.ratings.count, 'rating')}, average rating #{@user.average_rating}" %>
 </p>
 
+<h3>member of </h3>
+
+<div>
+  <ul>
+    <% @user.beer_clubs.each do |club| %>
+    <li>
+      <%= link_to club.name, beer_club_path(club.id) %> 
+    </li>
+    <% end %>
+  </ul>
+</div>
+
 <h3>ratings</h3>
 
 <div>
