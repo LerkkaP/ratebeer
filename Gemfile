@@ -80,3 +80,6 @@ gem "dockerfile-rails", ">= 1.4", :group => :development
 group :development, :test do
   gem 'pry-byebug'
 end
+
+gem 'bcrypt', '~> 3.1.7'
+
