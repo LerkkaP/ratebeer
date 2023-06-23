@@ -29,7 +29,7 @@
     <% @user.ratings.each do |rating| %>
     <li>
       <%= rating %>
-      <% if current_user && current_user == rating.user %>
+      <% if @user == current_user %>
         <%= button_to 'Delete', rating, method: :delete, data: { turbo_confirm: "Are you sure you want to delete?"} %>
         <% end %> 
     </li>
@@ -38,11 +38,15 @@
 </div>
 
 <div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
+  <% if @user == current_user %>
+    <%= link_to "Edit this user", edit_user_path(@user) %> |
+    <%= link_to "Back to users", users_path %>
+    <%= button_to "Destroy this user", @user, method: :delete %>
+  <% else %>
+    <%= link_to "Back to users", users_path %>
+  <% end %>
 </div>
+
 
 
 
