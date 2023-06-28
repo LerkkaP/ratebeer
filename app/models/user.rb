@@ -4,11 +4,11 @@ class User < ApplicationRecord
   has_secure_password
 
   PASSWORD_FORMAT = /\A
-  (?=.*\d)          
-  (?=.*[A-Z])        
+  (?=.*\d)
+  (?=.*[A-Z])
   /x
 
-  validates :password, length: { minimum: 4}, format: { with: PASSWORD_FORMAT }
+  validates :password, length: { minimum: 4 }, format: { with: PASSWORD_FORMAT }
 
   validates :username, uniqueness: true,
                        length: { minimum: 3, maximum: 30 }
