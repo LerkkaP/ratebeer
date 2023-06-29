@@ -8,8 +8,11 @@ describe "User" do
   let!(:beer1) { FactoryBot.create(:beer, name: "iso 3", brewery: brewery) }
 
   describe "who has signed up" do
+    before :each do
+      sign_in(username: "Pekka", password: "Foobar1")
+    end
     it "can signin with right credentials" do
-    sign_in(username: "Pekka", password: "Foobar1")
+    #sign_in(username: "Pekka", password: "Foobar1")
 
 
       expect(page).to have_content 'Welcome back!'
@@ -37,8 +40,28 @@ describe "User" do
       
       visit user_path(user.id)
 
+      #puts page.html
+      #save_and_open_page
+
       expect(current_path).to eq(user_path(user.id))
       expect(page).to have_content "iso 3 10"
+    end
+
+    it "can delete their own rating and it is removed from database" do
+      rating = FactoryBot.create(:rating, score: 10, beer: beer1, user: user)
+      visit user_path(user)
+
+      expect(page).to have_content("iso 3 10")
+
+      within "li" do
+        click_button "Delete"
+      end
+
+      expect(page).not_to have_content("iso 3 10")
+      expect(Rating.count).to eq(0)
+
+      #puts page.html
+      #save_and_open_page
     end
   end
 end
