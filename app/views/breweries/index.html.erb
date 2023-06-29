@@ -3,6 +3,10 @@
 
 <h1>Breweries</h1>
 
+<% if @breweries.empty? %>
+  <p>Listing breweries</p>
+<% end %>
+
 <p>Number of breweries: <%= @breweries.count %></p>
 
 <div id="breweries">

@@ -44,9 +44,12 @@
 </p>
 
 <h3>favorite brewery</h3>
-
 <p>
-  <%= @user.favorite_brewery.name %>
+  <% if @user.favorite_brewery %>
+    <%= @user.favorite_brewery.name %>
+  <% else %>
+    No favorite brewery specified.
+  <% end %>
 </p>
 
 <div>

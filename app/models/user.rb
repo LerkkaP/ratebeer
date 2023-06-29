@@ -41,6 +41,6 @@ class User < ApplicationRecord
   def favorite_brewery
     return nil if ratings.empty?
 
-  ratings.group_by { |rating| rating.beer.brewery }.max_by { |_brewery, ratings| average_rating_best(ratings) }.first
+    ratings.group_by { |rating| rating.beer.brewery }.max_by { |_brewery, ratings| average_rating_best(ratings) }.first
   end
 end
