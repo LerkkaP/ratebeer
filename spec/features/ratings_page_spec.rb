@@ -25,4 +25,18 @@ describe "Rating" do
     expect(beer1.ratings.count).to eq(1)
     expect(beer1.average_rating).to eq(15.0)
   end
+
+  it "displays the existing ratings and their count" do
+    FactoryBot.create(:rating, score: 10, beer: beer1, user: user)
+    FactoryBot.create(:rating, score: 20, beer: beer2, user: user)
+  
+    visit ratings_path
+
+    #puts page.html
+    #save_and_open_page
+  
+    expect(page).to have_content "Number of ratings: 2"
+    expect(page).to have_content "#{beer1.name} 10 #{user.username}"
+    expect(page).to have_content "#{beer2.name} 20 #{user.username}"
+  end
 end
