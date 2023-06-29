@@ -37,4 +37,10 @@ class User < ApplicationRecord
   def average_rating_best(ratings)
     ratings.sum(&:score).to_f / ratings.size
   end
+
+  def favorite_brewery
+    return nil if ratings.empty?
+
+  ratings.group_by { |rating| rating.beer.brewery }.max_by { |_brewery, ratings| average_rating_best(ratings) }.first
+  end
 end
