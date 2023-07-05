@@ -13,6 +13,12 @@
   <% end %>
 </div>
 
+<% if current_user && current_user.already_member_of?(@beer_club) %>
+  <%= form_with(model: current_user.memberships.find_by(beer_club_id: @beer_club.id), method: :delete) do |form| %>
+    <%= form.submit "End the membership" %>
+  <% end %>
+<% end %>
+
 <div>
     <%= link_to("Edit this beer club |", edit_beer_club_path(@beer_club)) if current_user%>
   <%= link_to "Back to beer clubs", beer_clubs_path %>
@@ -27,3 +33,4 @@
     <%= form.submit "Join the beer club" %>
   <% end %>
 <% end %>
+
