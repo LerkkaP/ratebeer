@@ -1,0 +1,27 @@
+
+<h3>Name:</h3>
+<%= @style.name %>
+
+<h3>Description:</h3>
+<%= @style.description%>
+
+<h3>Beers:</h3>
+<% if @style.beers.any? %>
+  <ul>
+    <% @style.beers.each do |beer| %>
+      <li><%= beer.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No beers found with this style.</p>
+<% end %>
+
+<% if current_user %>
+
+<div>
+  <%= link_to "Edit this style", edit_style_path(@style) %> |
+  <%= link_to "Back to styles", styles_path %>
+
+  <%= button_to "Destroy this style", @style, method: :delete %>
+</div>
+<% end %>

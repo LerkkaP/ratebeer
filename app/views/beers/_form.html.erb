@@ -16,8 +16,8 @@
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.select :style, options_for_select(@styles) %>
+  <div class="field">
+    <%= form.collection_select :style_id, Style.all, :id, :name %>
   </div>
 
   <div>

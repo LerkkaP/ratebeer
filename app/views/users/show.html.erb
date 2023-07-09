@@ -39,9 +39,13 @@
 
 <h3>favorite style</h3>
 
-<p>
-  <%= @user.favorite_style %> 
-</p>
+<% if @user.favorite_style.present? %>
+  <p>
+    <%= @user.favorite_style.name %> 
+  </p>
+<% else %>
+  <p>No favorite style selected.</p>
+<% end %>
 
 <h3>favorite brewery</h3>
 <p>
