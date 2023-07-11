@@ -34,10 +34,6 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - name: RuboCop Linter Action
-        uses: andrewmcodes-archive/rubocop-linter-action@v3.3.0
-        env:
-          REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
       - name: Run tests
         run: bundle exec rspec
 
