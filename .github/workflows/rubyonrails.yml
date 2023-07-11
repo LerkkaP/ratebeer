@@ -36,10 +36,8 @@ jobs:
           bundler-cache: true
       - name: RuboCop Linter Action
         uses: andrewmcodes-archive/rubocop-linter-action@v3.3.0
-        with:
-          action_config_path: .rubocop.yml
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
       - name: Run tests
         run: bundle exec rspec
 
