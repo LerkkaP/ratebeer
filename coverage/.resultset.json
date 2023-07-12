@@ -1,43 +1,43 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/helpers/application_helper.rb": {
+      "/home/erikpeteri/ratebeer/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/helpers/beer_clubs_helper.rb": {
+      "/home/erikpeteri/ratebeer/app/helpers/beer_clubs_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/helpers/beers_helper.rb": {
+      "/home/erikpeteri/ratebeer/app/helpers/beers_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/helpers/breweries_helper.rb": {
+      "/home/erikpeteri/ratebeer/app/helpers/breweries_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/helpers/memberships_helper.rb": {
+      "/home/erikpeteri/ratebeer/app/helpers/memberships_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/helpers/users_helper.rb": {
+      "/home/erikpeteri/ratebeer/app/helpers/users_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/models/beer.rb": {
+      "/home/erikpeteri/ratebeer/app/models/beer.rb": {
         "lines": [
           1,
           1,
@@ -45,46 +45,47 @@
           1,
           1,
           1,
+          1,
           null,
           1,
-          1,
+          null,
           null,
           1,
           0,
           null,
           0,
           null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/erikpeteri/ratebeer/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/erikpeteri/ratebeer/app/models/concerns/rating_average.rb": {
+        "lines": [
+          1,
+          1,
           null,
           1,
           2,
+          2,
           null,
-          null
-        ]
-      },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/models/concerns/rating_average.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          18,
-          12,
-          null,
-          6,
-          6,
+          0,
+          0,
           null,
           null,
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/models/user.rb": {
+      "/home/erikpeteri/ratebeer/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -105,6 +106,22 @@
           1,
           1,
           1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          1,
+          3,
+          null,
+          0,
+          null,
           null,
           1,
           0,
@@ -113,93 +130,87 @@
           1,
           3,
           null,
-          2,
+          0,
           null,
+          null
+        ]
+      },
+      "/home/erikpeteri/ratebeer/app/models/brewery.rb": {
+        "lines": [
+          1,
+          1,
           null,
           1,
+          1,
+          null,
+          1,
+          1,
+          null,
           19,
           null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/erikpeteri/ratebeer/app/models/style.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/erikpeteri/ratebeer/app/controllers/sessions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          2,
+          2,
+          2,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/erikpeteri/ratebeer/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          42,
+          null,
+          25,
           25,
           null,
-          null,
-          1,
-          22,
-          null,
-          null,
-          1,
-          23,
-          null,
-          42,
-          null,
-          null
-        ]
-      },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/models/brewery.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          42,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/controllers/sessions_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          11,
-          null,
-          11,
-          10,
-          10,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null
-        ]
-      },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          131,
-          null,
-          106,
-          106,
-          null,
           0,
           null,
           null,
@@ -210,7 +221,7 @@
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/controllers/users_controller.rb": {
+      "/home/erikpeteri/ratebeer/app/controllers/users_controller.rb": {
         "lines": [
           1,
           1,
@@ -226,7 +237,7 @@
           null,
           null,
           1,
-          1,
+          0,
           null,
           null,
           null,
@@ -235,59 +246,59 @@
           null,
           null,
           1,
-          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
           null,
           1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
           1,
           2,
-          1,
-          null,
-          0,
-          0,
-          null,
-          null,
           null,
           null,
           null,
           1,
           0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          16,
-          null,
-          null,
-          null,
-          1,
-          1,
           null,
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/models/rating.rb": {
+      "/home/erikpeteri/ratebeer/app/models/rating.rb": {
         "lines": [
           1,
           1,
@@ -298,12 +309,12 @@
           null,
           null,
           1,
-          7,
+          0,
           null,
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/models/membership.rb": {
+      "/home/erikpeteri/ratebeer/app/models/membership.rb": {
         "lines": [
           1,
           1,
@@ -311,7 +322,7 @@
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/models/beer_club.rb": {
+      "/home/erikpeteri/ratebeer/app/models/beer_club.rb": {
         "lines": [
           1,
           1,
@@ -319,7 +330,7 @@
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/controllers/beers_controller.rb": {
+      "/home/erikpeteri/ratebeer/app/controllers/beers_controller.rb": {
         "lines": [
           1,
           1,
@@ -333,6 +344,8 @@
           null,
           null,
           1,
+          0,
+          0,
           null,
           null,
           1,
@@ -403,7 +416,7 @@
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/controllers/breweries_controller.rb": {
+      "/home/erikpeteri/ratebeer/app/controllers/breweries_controller.rb": {
         "lines": [
           1,
           1,
@@ -489,7 +502,7 @@
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/lib/beermapping_api.rb": {
+      "/home/erikpeteri/ratebeer/lib/beermapping_api.rb": {
         "lines": [
           1,
           1,
@@ -520,7 +533,7 @@
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/models/place.rb": {
+      "/home/erikpeteri/ratebeer/app/models/place.rb": {
         "lines": [
           1,
           1,
@@ -529,7 +542,7 @@
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/controllers/places_controller.rb": {
+      "/home/erikpeteri/ratebeer/app/controllers/places_controller.rb": {
         "lines": [
           1,
           1,
@@ -548,6 +561,7 @@
           null,
           null,
           1,
+          3,
           3,
           3,
           1,
@@ -558,43 +572,7 @@
           null
         ]
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/controllers/ratings_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/channels/application_cable/channel.rb": {
+      "/home/erikpeteri/ratebeer/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -604,7 +582,7 @@
         "branches": {
         }
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/channels/application_cable/connection.rb": {
+      "/home/erikpeteri/ratebeer/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -614,7 +592,7 @@
         "branches": {
         }
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/controllers/beer_clubs_controller.rb": {
+      "/home/erikpeteri/ratebeer/app/controllers/beer_clubs_controller.rb": {
         "lines": [
           0,
           0,
@@ -626,6 +604,8 @@
           0,
           null,
           null,
+          0,
+          0,
           0,
           0,
           null,
@@ -692,7 +672,7 @@
         "branches": {
         }
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/controllers/memberships_controller.rb": {
+      "/home/erikpeteri/ratebeer/app/controllers/memberships_controller.rb": {
         "lines": [
           0,
           0,
@@ -723,6 +703,7 @@
           0,
           0,
           0,
+          null,
           0,
           0,
           0,
@@ -770,7 +751,100 @@
         "branches": {
         }
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/jobs/application_job.rb": {
+      "/home/erikpeteri/ratebeer/app/controllers/ratings_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/erikpeteri/ratebeer/app/controllers/styles_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/erikpeteri/ratebeer/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -783,7 +857,7 @@
         "branches": {
         }
       },
-      "/home/erikpeteri/webpalvelinohjelmointi2023/ratebeer/app/mailers/application_mailer.rb": {
+      "/home/erikpeteri/ratebeer/app/mailers/application_mailer.rb": {
         "lines": [
           0,
           0,
@@ -794,6 +868,6 @@
         }
       }
     },
-    "timestamp": 1688549457
+    "timestamp": 1689163580
   }
 }
