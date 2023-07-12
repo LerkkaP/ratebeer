@@ -13,11 +13,11 @@
 
   <div>
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, { :class => "form-control"} %>
   </div>
 
   <div class="field">
-    <%= form.collection_select :style_id, Style.all, :id, :name %>
+    <%= form.collection_select :style_id, Style.all, :id, :name  %>
   </div>
 
   <div>
@@ -25,7 +25,7 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Create Beer",  class:'btn btn-primary' %>
   </div>
 <% end %>
 
