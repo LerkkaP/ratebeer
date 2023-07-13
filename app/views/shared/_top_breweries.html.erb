@@ -1,6 +1,17 @@
-<h3>Top Breweries</h3>
-<ol>
-  <% breweries.each do |brewery| %>
-    <li><%= brewery.name %></li>
-  <% end %>
-</ol>
+<h3>Best Breweries</h3>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Brewery</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% breweries.each do |brewery| %>
+      <tr>
+        <td><%= brewery.name %></td>
+        <td><%= brewery.average_rating %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

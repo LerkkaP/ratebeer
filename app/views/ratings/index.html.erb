@@ -2,43 +2,11 @@
 
 <div class="row">
   <div class="col-md-6">
-    <h3>Best Beers</h3>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>Beer</th>
-          <th>Average</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @top_beers.each do |beer| %>
-          <tr>
-            <td><%= beer.name %></td>
-            <td><%= beer.average_rating %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+  <%= render 'shared/top_beers', beers: @top_beers %>
   </div>
 
   <div class="col-md-6">
-    <h3>Best Breweries</h3>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>Brewery</th>
-          <th>Average</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @top_breweries.each do |brewery| %>
-          <tr>
-            <td><%= brewery.name %></td>
-            <td><%= brewery.average_rating %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+  <%= render 'shared/top_breweries', breweries: @top_breweries %>
   </div>
 </div>
 
