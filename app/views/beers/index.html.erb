@@ -20,7 +20,7 @@
         <%= link_to beer.brewery.name, beer.brewery %>
       </th>
       <th>
-        <%= beer.average_rating%>
+        <%= round(beer.average_rating) %>
       </th>
     </tr>
     <%end%>
