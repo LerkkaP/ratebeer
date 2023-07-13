@@ -9,6 +9,10 @@ class Beer < ApplicationRecord
   validates :name, presence: true
   # validates :style, presence: true
 
+  def self.top_by_average_rating(n)
+    all.sort_by { |beer| -beer.average_rating.to_f }.take(n)
+  end
+
   def average
     return 0 if ratings.empty?
 

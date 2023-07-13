@@ -11,6 +11,13 @@ class Brewery < ApplicationRecord
     greater_than_or_equal_to: 1040
   }
 
+  scope :active, -> { where active: true }
+  scope :retired, -> { where active: [nil, false] }
+
+  def self.top_by_average_rating(n)
+    all.sort_by { |brewery| -brewery.average_rating.to_f }.take(n)
+  end
+
   def print_report
     puts name
     puts "established at year #{year}"

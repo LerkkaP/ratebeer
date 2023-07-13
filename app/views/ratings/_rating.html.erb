@@ -1,5 +1,7 @@
-<div id="<%= dom_id rating %>">
-
 <li>
-    <%=rating.beer.name + " " + rating.score.to_s%>
+  <%= rating.to_s %>
+  <span class="rating-date">
+    <%= rating.created_at.localtime.strftime("%Y-%m-%d %H:%M:%S") %>
+    <%= rating.created_at.zone %>
+  </span>
 </li>
