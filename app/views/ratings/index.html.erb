@@ -1,14 +1,25 @@
 <h2>Ratings</h2>
 
 <div class="row">
-  <div class="col-md-6">
-  <%= render 'shared/top_beers', beers: @top_beers %>
+  <div class="col-md-4">
+    <%= render 'shared/top_beers', beers: @top_beers %>
   </div>
 
-  <div class="col-md-6">
-  <%= render 'shared/top_breweries', breweries: @top_breweries %>
+  <div class="col-md-4">
+    <%= render 'shared/top_breweries', breweries: @top_breweries %>
+  </div>
+
+  <div class="col-md-4">
+    <%= render 'shared/top_styles', styles: @top_styles %>
   </div>
 </div>
+
+<h3>Most active users</h3>
+<ol>
+  <% @top_users.each do |user| %>
+    <li><%= user.username %> <%= user.ratings.count %> ratings </li>
+  <% end %>
+</ol>
 
 <div>
   <h3>Recent Ratings</h3>

@@ -2,6 +2,8 @@ class RatingsController < ApplicationController
   def index
     @top_beers = Beer.top_by_average_rating(3)
     @top_breweries = Brewery.top_by_average_rating(3)
+    @top_styles = Style.top_by_average_rating(3)
+    @top_users = User.joins(:ratings).group(:id).order('COUNT(ratings.id) DESC').limit(3)
     @recent_ratings = Rating.recent
   end
 
