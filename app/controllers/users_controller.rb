@@ -61,6 +61,12 @@ class UsersController < ApplicationController
 
   private
 
+  def ensure_admin
+    return if current_user&.admin?
+
+    redirect_to root_path, notice: "Only admins can perform this action."
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_user
     @user = User.find(params[:id])
