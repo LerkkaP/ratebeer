@@ -1,6 +1,7 @@
 class BeerClubsController < ApplicationController
   before_action :set_beer_club, only: %i[show edit update destroy]
   before_action :ensure_that_signed_in, except: [:index, :show]
+  before_action :ensure_admin, only: [:destroy]
 
   # GET /beer_clubs or /beer_clubs.json
   def index
@@ -61,6 +62,12 @@ class BeerClubsController < ApplicationController
   end
 
   private
+
+  def ensure_admin
+    return if current_user&.admin?
+
+    redirect_to root_path, notice: "Only admins can perform this action."
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_beer_club

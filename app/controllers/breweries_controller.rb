@@ -1,6 +1,7 @@
 class BreweriesController < ApplicationController
   before_action :set_brewery, only: %i[show edit update destroy]
   before_action :ensure_that_signed_in, except: [:index, :show]
+  before_action :ensure_admin, only: [:destroy]
 
   # GET /breweries or /breweries.json
   def index
@@ -59,7 +60,22 @@ class BreweriesController < ApplicationController
     end
   end
 
+  def toggle_activity
+    brewery = Brewery.find(params[:id])
+    brewery.update_attribute :active, !brewery.active
+
+    new_status = brewery.active? ? "active" : "retired"
+
+    redirect_to brewery, notice: "Brewery activity status changed to #{new_status}"
+  end
+
   private
+
+  def ensure_admin
+    return if current_user&.admin?
+
+    redirect_to root_path, notice: "Only admins can perform this action."
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_brewery

@@ -1,4 +1,6 @@
 class StylesController < ApplicationController
+  before_action :ensure_admin, only: [:destroy]
+
   def index
     @styles = Style.all
   end
@@ -42,6 +44,12 @@ class StylesController < ApplicationController
   end
 
   private
+
+  def ensure_admin
+    return if current_user&.admin?
+
+    redirect_to root_path, notice: "Only admins can perform this action."
+  end
 
   def style_params
     params.require(:style).permit(:name, :description)

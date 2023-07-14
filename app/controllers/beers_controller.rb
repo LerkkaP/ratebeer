@@ -2,6 +2,7 @@ class BeersController < ApplicationController
   before_action :set_beer, only: %i[show edit update destroy]
   before_action :set_breweries_and_styles_for_template, only: [:new, :edit, :create]
   before_action :ensure_that_signed_in, except: [:index, :show]
+  before_action :ensure_admin, only: [:destroy]
 
   # GET /beers or /beers.json
   def index
@@ -69,6 +70,12 @@ class BeersController < ApplicationController
   end
 
   private
+
+  def ensure_admin
+    return if current_user&.admin?
+
+    redirect_to root_path, notice: "Only admins can perform this action."
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_beer
