@@ -5,6 +5,7 @@ class RatingsController < ApplicationController
     @top_styles = Style.top_by_average_rating(3)
     @top_users = User.joins(:ratings).group(:id).order('COUNT(ratings.id) DESC').limit(3)
     @recent_ratings = Rating.recent
+    @ratings = Rating.all
   end
 
   def new
